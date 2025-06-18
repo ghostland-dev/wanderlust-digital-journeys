@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 158 64% 52%;
+    --primary: 0 84% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 93% 47%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 146 52% 45%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 45 50% 95%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 199 89% 48%;
+    --accent: 39 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +33,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 158 64% 52%;
+    --ring: 0 84% 60%;
 
     --radius: 0.75rem;
 
@@ -46,11 +46,11 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Travel specific colors */
-    --travel-emerald: 158 64% 52%;
-    --travel-ocean: 199 89% 48%;
-    --travel-gold: 45 93% 47%;
-    --travel-sunset: 24 95% 53%;
+    /* Morocco specific colors */
+    --morocco-red: 0 84% 60%;
+    --morocco-green: 146 52% 45%;
+    --morocco-gold: 39 100% 50%;
+    --morocco-orange: 24 95% 53%;
   }
 
   .dark {
@@ -63,16 +63,16 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 158 64% 52%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 93% 47%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 146 52% 45%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 199 89% 48%;
+    --accent: 39 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -80,7 +80,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 158 64% 52%;
+    --ring: 0 84% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -106,9 +106,9 @@
 @layer components {
   .hero-gradient {
     background: linear-gradient(135deg, 
-      rgba(5, 150, 105, 0.9) 0%, 
-      rgba(14, 165, 233, 0.8) 50%, 
-      rgba(245, 158, 11, 0.9) 100%);
+      rgba(220, 38, 38, 0.9) 0%, 
+      rgba(251, 146, 60, 0.8) 50%, 
+      rgba(16, 185, 129, 0.9) 100%);
   }
   
   .card-hover {
@@ -121,37 +121,37 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  /* Custom travel colors */
-  .travel-emerald {
-    color: hsl(var(--travel-emerald));
+  /* Custom Morocco colors */
+  .morocco-red {
+    color: hsl(var(--morocco-red));
   }
   
-  .bg-travel-emerald {
-    background-color: hsl(var(--travel-emerald));
+  .bg-morocco-red {
+    background-color: hsl(var(--morocco-red));
   }
   
-  .travel-ocean {
-    color: hsl(var(--travel-ocean));
+  .morocco-green {
+    color: hsl(var(--morocco-green));
   }
   
-  .bg-travel-ocean {
-    background-color: hsl(var(--travel-ocean));
+  .bg-morocco-green {
+    background-color: hsl(var(--morocco-green));
   }
   
-  .travel-gold {
-    color: hsl(var(--travel-gold));
+  .morocco-gold {
+    color: hsl(var(--morocco-gold));
   }
   
-  .bg-travel-gold {
-    background-color: hsl(var(--travel-gold));
+  .bg-morocco-gold {
+    background-color: hsl(var(--morocco-gold));
   }
   
-  .travel-sunset {
-    color: hsl(var(--travel-sunset));
+  .morocco-orange {
+    color: hsl(var(--morocco-orange));
   }
   
-  .bg-travel-sunset {
-    background-color: hsl(var(--travel-sunset));
+  .bg-morocco-orange {
+    background-color: hsl(var(--morocco-orange));
   }
 
   /* Text utilities */

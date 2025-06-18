@@ -11,12 +11,12 @@ const HeroSection = () => {
   const [budget, setBudget] = useState('');
 
   const popularDestinations = [
-    'Bali, Indonésie',
-    'Santorini, Grèce',
-    'Kyoto, Japon',
-    'Patagonie, Argentine',
-    'Islande',
-    'Maldives'
+    'Marrakech',
+    'Fès',
+    'Casablanca',
+    'Rabat',
+    'Désert du Sahara',
+    'Chefchaouen'
   ];
 
   return (
@@ -25,8 +25,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50 z-10"></div>
         <img
-          src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
-          alt="Destination de rêve"
+          src="https://images.unsplash.com/photo-1539650116574-75c0c6d73862?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+          alt="Marrakech la ville rouge"
           className="w-full h-full object-cover"
         />
       </div>
@@ -35,13 +35,13 @@ const HeroSection = () => {
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Vivez des moments
-            <span className="block text-travel-gold bg-gradient-to-r from-travel-gold to-travel-sunset bg-clip-text text-transparent">
-              extraordinaires
+            Découvrez la magie du
+            <span className="block text-red-500 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+              Maroc authentique
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Découvrez le monde avec nos voyages sur mesure, conçus pour créer des souvenirs inoubliables
+            Vivez des expériences uniques dans le Royaume, des médinas impériales aux dunes du Sahara
           </p>
 
           {/* Video Play Button */}
@@ -60,13 +60,13 @@ const HeroSection = () => {
         {/* Search Form */}
         <div className="animate-slide-up max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20">
-            <h3 className="text-2xl font-semibold text-white mb-6">Trouvez votre voyage idéal</h3>
+            <h3 className="text-2xl font-semibold text-white mb-6">Planifiez votre voyage au Maroc</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
               <div className="relative">
                 <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <Input
-                  placeholder="Où souhaitez-vous aller ?"
+                  placeholder="Quelle ville souhaitez-vous visiter ?"
                   value={destination}
                   onChange={(e) => setDestination(e.target.value)}
                   className="pl-10 bg-white/90 border-white/30 text-gray-800 placeholder:text-gray-500"
@@ -99,23 +99,23 @@ const HeroSection = () => {
               
               <Select value={budget} onValueChange={setBudget}>
                 <SelectTrigger className="bg-white/90 border-white/30 text-gray-800">
-                  <SelectValue placeholder="Budget" />
+                  <SelectValue placeholder="Budget (DH)" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="1000-3000">1 000€ - 3 000€</SelectItem>
-                  <SelectItem value="3000-5000">3 000€ - 5 000€</SelectItem>
-                  <SelectItem value="5000-10000">5 000€ - 10 000€</SelectItem>
-                  <SelectItem value="10000+">10 000€+</SelectItem>
+                  <SelectItem value="1000-3000">1 000 - 3 000 DH</SelectItem>
+                  <SelectItem value="3000-5000">3 000 - 5 000 DH</SelectItem>
+                  <SelectItem value="5000-10000">5 000 - 10 000 DH</SelectItem>
+                  <SelectItem value="10000+">10 000+ DH</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             
             <Button 
               size="lg" 
-              className="bg-travel-emerald hover:bg-travel-emerald/90 text-white px-8 py-3 rounded-xl font-semibold w-full md:w-auto"
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-xl font-semibold w-full md:w-auto"
             >
               <Search className="h-5 w-5 mr-2" />
-              Rechercher mon voyage
+              Rechercher mon circuit
             </Button>
           </div>
 

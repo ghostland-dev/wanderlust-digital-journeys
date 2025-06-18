@@ -12,10 +12,10 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="VoyageÉlite - Agence de voyage de luxe"
-        description="Découvrez des destinations exceptionnelles avec VoyageÉlite. Voyages sur mesure, expériences authentiques et service premium pour des moments inoubliables."
-        keywords="voyage luxe, agence voyage, destinations exclusives, voyages sur mesure, séjours premium"
-        url="https://voyageelite.fr"
+        title="VoyageMaroc - Agence de voyage au Maroc"
+        description="Découvrez le Maroc authentique avec VoyageMaroc. Circuits sur mesure, excursions guidées et expériences uniques dans tout le Royaume."
+        keywords="voyage maroc, circuit maroc, excursion marrakech, désert sahara, fès, casablanca, agence voyage maroc"
+        url="https://voyagemaroc.ma"
       />
       <Header />
       <main>

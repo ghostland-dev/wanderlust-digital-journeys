@@ -9,65 +9,65 @@ import { Star, MapPin, Clock } from 'lucide-react';
 const FeaturedDestinations = () => {
   const destinations = [
     {
-      id: 'bali',
-      title: "Bali Authentique",
-      location: "Indonésie",
-      image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      price: "À partir de 1 890€",
-      duration: "12 jours",
+      id: 'marrakech',
+      title: "Marrakech Impériale",
+      location: "Marrakech",
+      image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73862?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "À partir de 1 200 DH",
+      duration: "3 jours",
       rating: 4.9,
-      reviews: 127,
-      description: "Temples anciens, rizières en terrasses et plages paradisiaques",
-      highlights: ["Vol inclus", "Guide francophone", "Hôtels charme"],
-      badge: "Bestseller"
+      reviews: 234,
+      description: "Découvrez la ville rouge, ses souks colorés et la place Jemaa el-Fna",
+      highlights: ["Hôtel Riad", "Guide local", "Dîner spectacle"],
+      badge: "Populaire"
     },
     {
-      id: 'grece',
-      title: "Îles Grecques Premium",
-      location: "Grèce",
-      image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      price: "À partir de 2 490€",
-      duration: "10 jours",
+      id: 'fes',
+      title: "Fès Authentique",
+      location: "Fès",
+      image: "https://images.unsplash.com/photo-1589445768054-f5b9111ca2a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "À partir de 1 800 DH",
+      duration: "4 jours",
       rating: 4.8,
-      reviews: 89,
-      description: "Santorini, Mykonos et Crète dans un voyage de luxe",
-      highlights: ["Hôtels 5*", "Croisière privée", "Couchers de soleil"],
-      badge: "Luxe"
+      reviews: 156,
+      description: "Explorez la médina de Fès, ses artisans et son université Al Quaraouiyine",
+      highlights: ["Médina UNESCO", "Artisans locaux", "Cuisine traditionnelle"],
+      badge: "Culture"
     },
     {
-      id: 3,
-      title: "Safari Tanzanie",
-      location: "Afrique",
-      image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      price: "À partir de 3 290€",
-      duration: "14 jours",
-      rating: 4.9,
-      reviews: 156,
-      description: "Serengeti, Ngorongoro et ascension du Kilimandjaro",
-      highlights: ["Safari 4x4", "Lodges premium", "Guide expert"],
+      id: 'sahara',
+      title: "Désert du Sahara",
+      location: "Merzouga",
+      image: "https://images.unsplash.com/photo-1519409349137-3903f76e0edc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "À partir de 2 500 DH",
+      duration: "3 jours",
+      rating: 5.0,
+      reviews: 189,
+      description: "Expérience magique dans les dunes de l'Erg Chebbi avec nuit sous les étoiles",
+      highlights: ["Caravane chameau", "Bivouac luxe", "Lever de soleil"],
       badge: "Aventure"
     },
     {
-      id: 4,
-      title: "Japon Traditionnel",
-      location: "Asie",
-      image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      price: "À partir de 2 790€",
-      duration: "15 jours",
-      rating: 4.7,
+      id: 'casablanca',
+      title: "Casablanca Moderne",
+      location: "Casablanca",
+      image: "https://images.unsplash.com/photo-1570896737435-32becd7d5a47?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      price: "À partir de 900 DH",
+      duration: "2 jours",
+      rating: 4.6,
       reviews: 98,
-      description: "Tokyo moderne, Kyoto traditionnel et mont Fuji",
-      highlights: ["JR Pass inclus", "Ryokan authentique", "Expériences uniques"],
-      badge: "Culture"
+      description: "Découvrez la capitale économique et la mosquée Hassan II",
+      highlights: ["Mosquée Hassan II", "Corniche", "Quartier Habous"],
+      badge: "Moderne"
     }
   ];
 
   const getBadgeColor = (badge: string) => {
     const colors = {
-      'Bestseller': 'bg-travel-emerald text-white',
-      'Luxe': 'bg-travel-gold text-white',
-      'Aventure': 'bg-travel-sunset text-white',
-      'Culture': 'bg-travel-ocean text-white'
+      'Populaire': 'bg-red-600 text-white',
+      'Culture': 'bg-green-600 text-white',
+      'Aventure': 'bg-orange-600 text-white',
+      'Moderne': 'bg-blue-600 text-white'
     };
     return colors[badge as keyof typeof colors] || 'bg-gray-500 text-white';
   };
@@ -77,11 +77,11 @@ const FeaturedDestinations = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Nos destinations
-            <span className="block text-travel-emerald">coup de cœur</span>
+            Découvrez le
+            <span className="block text-red-600">Maroc authentique</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Découvrez nos voyages les plus prisés, soigneusement sélectionnés pour leur authenticité et leur caractère exceptionnel
+            Explorez les merveilles du Royaume, de Marrakech la rouge au Sahara doré, en passant par Fès l'impériale
           </p>
         </div>
 
@@ -116,7 +116,7 @@ const FeaturedDestinations = () => {
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="text-2xl font-bold text-travel-emerald">{destination.price}</p>
+                    <p className="text-2xl font-bold text-red-600">{destination.price}</p>
                     <div className="flex items-center text-gray-600 text-sm mt-1">
                       <Clock className="h-4 w-4 mr-1" />
                       <span>{destination.duration}</span>
@@ -128,7 +128,7 @@ const FeaturedDestinations = () => {
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {destination.highlights.map((highlight, index) => (
-                    <Badge key={index} variant="secondary" className="bg-travel-emerald/10 text-travel-emerald">
+                    <Badge key={index} variant="secondary" className="bg-red-50 text-red-600">
                       {highlight}
                     </Badge>
                   ))}
@@ -137,17 +137,17 @@ const FeaturedDestinations = () => {
                 <div className="flex space-x-3">
                   {typeof destination.id === 'string' ? (
                     <Link to={`/trip/${destination.id}`} className="flex-1">
-                      <Button className="w-full bg-travel-emerald hover:bg-travel-emerald/90">
-                        Voir le voyage
+                      <Button className="w-full bg-red-600 hover:bg-red-700">
+                        Voir le circuit
                       </Button>
                     </Link>
                   ) : (
-                    <Button className="flex-1 bg-travel-emerald hover:bg-travel-emerald/90">
-                      Voir le voyage
+                    <Button className="flex-1 bg-red-600 hover:bg-red-700">
+                      Voir le circuit
                     </Button>
                   )}
                   <Link to="/contact">
-                    <Button variant="outline" className="border-travel-emerald text-travel-emerald hover:bg-travel-emerald hover:text-white">
+                    <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
                       Devis gratuit
                     </Button>
                   </Link>
@@ -158,8 +158,8 @@ const FeaturedDestinations = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="border-travel-emerald text-travel-emerald hover:bg-travel-emerald hover:text-white">
-            Voir toutes les destinations
+          <Button size="lg" variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
+            Voir tous nos circuits
           </Button>
         </div>
       </div>
