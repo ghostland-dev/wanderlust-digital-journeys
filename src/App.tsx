@@ -14,6 +14,8 @@ import Blog from "./pages/Blog";
 import CustomTrips from "./pages/CustomTrips";
 import Contact from "./pages/Contact";
 import TripDetails from "./pages/TripDetails";
+import ClientArea from "./pages/ClientArea";
+import BackOffice from "./pages/BackOffice";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient({
@@ -39,6 +41,8 @@ const App = () => (
               <Route path="/blog" element={<Blog />} />
               <Route path="/custom-trips" element={<CustomTrips />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/client-area" element={<ClientArea />} />
+              <Route path="/admin" element={<BackOffice />} />
               <Route path="/trip/:tripId" element={<TripDetails />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

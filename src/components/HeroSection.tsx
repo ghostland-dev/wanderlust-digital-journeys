@@ -25,8 +25,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50 z-10"></div>
         <img
-          src="https://images.unsplash.com/photo-1539650116574-75c0c6d73862?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
-          alt="Marrakech la ville rouge"
+          src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+          alt="Place Jemaa el-Fna à Marrakech"
           className="w-full h-full object-cover"
         />
       </div>

@@ -98,14 +98,17 @@ const Header = () => {
               >
                 <ShoppingBag className="h-4 w-4" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300 text-xs xl:text-sm"
-              >
-                <User className="h-4 w-4 mr-1 xl:mr-2" />
-                <span className="hidden xl:inline">Connexion</span>
-              </Button>
+              <Link to="/client-area">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300 text-xs xl:text-sm"
+                >
+                  <User className="h-4 w-4 mr-1 xl:mr-2" />
+                  <span className="hidden xl:inline">Mon espace</span>
+                  <span className="xl:hidden">Espace</span>
+                </Button>
+              </Link>
               <Link to="/contact">
                 <Button 
                   size="sm" 
@@ -162,13 +165,15 @@ const Header = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t border-gray-200 space-y-3">
-                <Button 
-                  variant="outline" 
-                  className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300"
-                >
-                  <User className="h-4 w-4 mr-2" />
-                  Connexion
-                </Button>
+                <Link to="/client-area">
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-300"
+                  >
+                    <User className="h-4 w-4 mr-2" />
+                    Mon espace client
+                  </Button>
+                </Link>
                 <Link to="/contact">
                   <Button className="w-full bg-red-600 hover:bg-red-700 transition-all duration-300">
                     Devis gratuit
