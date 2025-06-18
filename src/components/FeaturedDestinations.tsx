@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -8,7 +9,7 @@ import { Star, MapPin, Clock } from 'lucide-react';
 const FeaturedDestinations = () => {
   const destinations = [
     {
-      id: 1,
+      id: 'bali',
       title: "Bali Authentique",
       location: "Indonésie",
       image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -21,7 +22,7 @@ const FeaturedDestinations = () => {
       badge: "Bestseller"
     },
     {
-      id: 2,
+      id: 'grece',
       title: "Îles Grecques Premium",
       location: "Grèce",
       image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -134,12 +135,22 @@ const FeaturedDestinations = () => {
                 </div>
                 
                 <div className="flex space-x-3">
-                  <Button className="flex-1 bg-travel-emerald hover:bg-travel-emerald/90">
-                    Voir le voyage
-                  </Button>
-                  <Button variant="outline" className="border-travel-emerald text-travel-emerald hover:bg-travel-emerald hover:text-white">
-                    Devis gratuit
-                  </Button>
+                  {typeof destination.id === 'string' ? (
+                    <Link to={`/trip/${destination.id}`} className="flex-1">
+                      <Button className="w-full bg-travel-emerald hover:bg-travel-emerald/90">
+                        Voir le voyage
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button className="flex-1 bg-travel-emerald hover:bg-travel-emerald/90">
+                      Voir le voyage
+                    </Button>
+                  )}
+                  <Link to="/contact">
+                    <Button variant="outline" className="border-travel-emerald text-travel-emerald hover:bg-travel-emerald hover:text-white">
+                      Devis gratuit
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
