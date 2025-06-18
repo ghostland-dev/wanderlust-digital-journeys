@@ -3,6 +3,8 @@ import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Breadcrumb from '@/components/Breadcrumb';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -125,10 +127,28 @@ const TripDetails = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title={`${trip.title} - ${trip.location}`}
+        description={trip.longDescription}
+        keywords={`${trip.title}, ${trip.location}, voyage, ${trip.badge.toLowerCase()}`}
+        image={trip.images[0]}
+        url={`https://voyageelite.fr/trip/${trip.id}`}
+      />
       <Header />
       
+      {/* Breadcrumb */}
+      <section className="pt-20 pb-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[
+            { label: 'Accueil', href: '/' },
+            { label: 'Voyages', href: '/#destinations' },
+            { label: trip.title, href: `/trip/${trip.id}` }
+          ]} />
+        </div>
+      </section>
+
       {/* Hero Section */}
-      <section className="pt-20 relative">
+      <section className="relative bg-gray-50">
         <div className="relative h-[60vh] overflow-hidden">
           <img
             src={trip.images[0]}
