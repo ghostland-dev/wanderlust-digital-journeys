@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Star, MapPin, Clock, Users } from 'lucide-react';
+import { Star, MapPin, Clock } from 'lucide-react';
 
 const FeaturedDestinations = () => {
   const destinations = [
@@ -52,7 +52,6 @@ const FeaturedDestinations = () => {
       location: "Asie",
       image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       price: "À partir de 2 790€",
-      duration: "15 jours",
       duration: "15 jours",
       rating: 4.7,
       reviews: 98,
