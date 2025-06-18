@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Plane, Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
@@ -7,32 +8,32 @@ import { Plane, Mail, Phone, MapPin, Facebook, Instagram, Twitter, Youtube } fro
 const Footer = () => {
   const footerLinks = {
     voyages: [
-      { name: 'Destinations', href: '#' },
-      { name: 'Voyages sur mesure', href: '#' },
-      { name: 'Groupes & familles', href: '#' },
-      { name: 'Lune de miel', href: '#' },
-      { name: 'Voyages d\'aventure', href: '#' },
+      { name: 'Destinations', href: '/' },
+      { name: 'Voyages sur mesure', href: '/custom-trips' },
+      { name: 'Groupes & familles', href: '/custom-trips' },
+      { name: 'Lune de miel', href: '/custom-trips' },
+      { name: 'Voyages d\'aventure', href: '/custom-trips' },
     ],
     services: [
-      { name: 'Devis gratuit', href: '#' },
-      { name: 'Conciergerie voyage', href: '#' },
-      { name: 'Assurances voyage', href: '#' },
-      { name: 'Cartes cadeaux', href: '#' },
-      { name: 'Programme fidélité', href: '#' },
+      { name: 'Devis gratuit', href: '/contact' },
+      { name: 'Conciergerie voyage', href: '/contact' },
+      { name: 'Assurances voyage', href: '/contact' },
+      { name: 'Cartes cadeaux', href: '/contact' },
+      { name: 'Programme fidélité', href: '/contact' },
     ],
     support: [
-      { name: 'Centre d\'aide', href: '#' },
-      { name: 'Contact', href: '#' },
-      { name: 'Urgence voyage', href: '#' },
-      { name: 'Réclamations', href: '#' },
-      { name: 'FAQ', href: '#' },
+      { name: 'Centre d\'aide', href: '/contact' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Urgence voyage', href: '/contact' },
+      { name: 'Réclamations', href: '/contact' },
+      { name: 'FAQ', href: '/contact' },
     ],
     entreprise: [
-      { name: 'À propos', href: '#' },
-      { name: 'Notre équipe', href: '#' },
-      { name: 'Careers', href: '#' },
-      { name: 'Presse', href: '#' },
-      { name: 'Partenaires', href: '#' },
+      { name: 'À propos', href: '/about' },
+      { name: 'Notre équipe', href: '/about' },
+      { name: 'Careers', href: '/about' },
+      { name: 'Presse', href: '/blog' },
+      { name: 'Partenaires', href: '/about' },
     ]
   };
 
@@ -54,11 +55,11 @@ const Footer = () => {
               Recevez nos meilleures offres de voyage, conseils d'experts et inspiration pour vos prochaines aventures
             </p>
           </div>
-          <div className="max-w-md mx-auto flex space-x-4">
+          <div className="max-w-md mx-auto flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <Input
               type="email"
               placeholder="Votre adresse email"
-              className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-400"
+              className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-400 flex-1"
             />
             <Button className="bg-travel-emerald hover:bg-travel-emerald/90 px-6">
               <Mail className="h-4 w-4 mr-2" />
@@ -73,12 +74,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
+            <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="p-2 rounded-full bg-travel-emerald text-white">
                 <Plane className="h-6 w-6" />
               </div>
               <span className="text-2xl font-bold text-white">VoyageÉlite</span>
-            </div>
+            </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Créateur de voyages d'exception depuis 2015. Nous transformons vos rêves d'évasion en souvenirs inoubliables.
             </p>
@@ -117,9 +118,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.voyages.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
+                  <Link to={link.href} className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -130,9 +131,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
+                  <Link to={link.href} className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -143,9 +144,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
+                  <Link to={link.href} className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -156,9 +157,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.entreprise.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
+                  <Link to={link.href} className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -173,16 +174,16 @@ const Footer = () => {
             <div className="text-gray-400 text-sm">
               © 2024 VoyageÉlite. Tous droits réservés.
             </div>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
+            <div className="flex flex-wrap justify-center space-x-6 text-sm">
+              <Link to="/contact" className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
                 Conditions générales
-              </a>
-              <a href="#" className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
+              </Link>
+              <Link to="/contact" className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
                 Politique de confidentialité
-              </a>
-              <a href="#" className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
+              </Link>
+              <Link to="/contact" className="text-gray-400 hover:text-travel-emerald transition-colors duration-200">
                 Cookies
-              </a>
+              </Link>
             </div>
           </div>
         </div>
